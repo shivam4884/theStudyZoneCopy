@@ -1,0 +1,223 @@
+/* src/index.css */
+/* ─────────────────────────────────────────────
+   1. Import Google Fonts (free, no signup needed)
+   - "Plus Jakarta Sans" → used for headings
+   - "Inter" → used for body text
+   ───────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+/* ─────────────────────────────────────────────
+   2. Import Tailwind CSS (v4 syntax — just one line!)
+   ───────────────────────────────────────────── */
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────
+   3. CSS Custom Properties (Design Tokens)
+   These are your brand colors — change here to
+   update the ENTIRE site at once.
+   ───────────────────────────────────────────── */
+:root {
+  /* Modern Brand Colors - Calm, Academic, Trustworthy */
+  --color-primary:     #133B66;   /* Deep navy for text and headings */
+  --color-primary-dark: #0B2A4A;  /* Strong dark navy */
+  --color-primary-light: #4A6E96; /* Soft navy accent */
+  
+  --color-accent:      #2563EB;   /* Trust blue */
+  --color-accent-light: #6098D3;  /* Soft blue accent */
+  
+  --color-teal:        #0F766E;   /* Growth teal */
+  --color-teal-light:  #7DD3FC;   /* Light teal accent */
+  --color-teal-pale:   #E6FFFA;   /* Pale teal surfaces */
+  
+  --color-purple:      #64748B;   /* Slate accent */
+  --color-blue:        #3B82F6;   /* Secondary blue */
+  --color-green:       #10B981;   /* Success green */
+
+  /* Neutral Colors */
+  --color-bg:          #F4F7FB;   /* Soft off-white background */
+  --color-bg-light:    #E8EFF7;   /* Gentle slate surface */
+  --color-white:       #FFFFFF;
+  --color-text:        #102A43;   /* Deep navy text */
+  --color-text-muted:  #52667C;   /* Calm muted text */
+  --color-border:      #CBD5E1;   /* Light slate borders */
+  --color-card-bg:     #FFFFFF;   /* Paper card background */
+  --color-section-alt: #EEF4FB;   /* Gentle alternate section */
+  
+  /* Accent backgrounds */
+  --color-danger:      #EF4444;
+  --color-warning:     #F59E0B;
+  --color-success:     #0F766E;
+
+  /* Typography */
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-body:    'Inter', sans-serif;
+
+  /* Spacing */
+  --section-py: 6rem;             /* Section vertical padding */
+
+  /* Transitions */
+  --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ─────────────────────────────────────────────
+   4. Base Styles
+   Applied to every element globally.
+   ───────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-padding-top: 100px; /* Adjust this value to match your Navbar height */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;  /* Sharper text on Mac/iOS */
+  background: linear-gradient(135deg, #F4F7FB 0%, #EDF4FB 100%);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+a {
+  /* color: inherit; */
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ─────────────────────────────────────────────
+   5. Utility Classes (custom, non-Tailwind)
+   Use these in your JSX as className="..."
+   ───────────────────────────────────────────── */
+
+/* Container — centers content with max width */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+/* Card Styles - Soft, elevated academic surfaces */
+.card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: var(--transition-base);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.06) 0%, rgba(15, 118, 110, 0.04) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 1rem;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover {
+  border-color: rgba(37, 99, 235, 0.18);
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(15, 118, 110, 0.1);
+}
+
+/* Fade-in animation for scroll triggered elements */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: var(--transition-smooth);
+}
+
+.fade-in.visible {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 50%, var(--color-teal) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Eyebrow label — small colored text above headings */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-teal);
+}
+
+/* Section padding utility */
+.section-py {
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
+}
+
+/* Card base styles */
+.card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(15, 118, 110, 0.08);
+  border-color: rgba(37, 99, 235, 0.18);
+}
+
+/* Fade-in animation for scroll reveal */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
