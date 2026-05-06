@@ -7,6 +7,8 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
+
+  base: '/theStudyZoneCopy/', // Set the base path for all assets
   plugins: [
     react(),        // Enables React JSX support
     tailwindcss(),  // Enables Tailwind CSS utility classes
