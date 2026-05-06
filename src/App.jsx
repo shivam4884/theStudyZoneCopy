@@ -37,7 +37,7 @@ import Contact        from './pages/Contact'
 function App() {
   return (
     // BrowserRouter enables URL-based navigation
-    <BrowserRouter>
+    <BrowserRouter basename="/theStudyZoneCopy">
       {/* Navbar is outside <Routes> so it appears on ALL pages */}
       <Navbar />
       <ScrollToHash />
