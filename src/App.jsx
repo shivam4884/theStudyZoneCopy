@@ -33,6 +33,7 @@ import FAQ            from './pages/FAQ'
 import Feedback       from './pages/Feedback'
 import BecomeAnAffiliate from './pages/BecomeAnAffiliate'
 import Contact        from './pages/Contact'
+import Chatbot from './components/Chatbot'
 
 function App() {
   return (
@@ -70,6 +71,7 @@ function App() {
 
       {/* Footer is outside <Routes> so it appears on ALL pages */}
       <Footer />
+      <Chatbot />
     </BrowserRouter>
   )
 }

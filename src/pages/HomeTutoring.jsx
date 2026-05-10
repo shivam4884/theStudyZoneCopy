@@ -137,13 +137,13 @@ export default function HomeTutoring() {
           </h2>
           <p 
             className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto break-words"
-            style={{ marginBottom: '1.5rem' }}
+            style={{ margin: '0 auto 3rem auto' }}
           >
             Boost your child's confidence and unlock their academic potential with The Study Zone's exceptional home tutoring services in Brampton and GTA. Don't let their grades hold them back!
           </p>
           <p 
             className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto break-words"
-            style={{ marginBottom: '3rem' }}
+            style={{ margin: '0 auto 3rem auto' }}
           >
             Act now, give us a call or register online and give your child the academic advantage they deserve with 'The Study Zone'. Together, we'll pave the way for a brighter future!
           </p>

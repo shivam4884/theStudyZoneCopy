@@ -38,12 +38,15 @@ export default function BecomeAnAffiliate() {
             Become an <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-600">Affiliate</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto break-words" style={{ marginBottom: '3rem' }}>
+          <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto break-words" 
+            style={{ margin: '0 auto 3rem auto' }}
+          >
             Join The Study Zone network. Partner with us, refer students to our expert tutoring programs, and grow alongside a premier educational platform.
           </p>
 
           {/* Value Props */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 max-w-3xl mx-auto" style={{ gap: '1.5rem', marginBottom: '2rem' }}>
+          <div className="grid grid-cols-1 sm:grid-cols-3 max-w-3xl mx-auto" style={{ gap: '1.5rem', marginBottom: '2rem' ,margin: '0 auto 3rem auto' }}
+          >
             <div className="flex flex-col items-center" style={{ gap: '0.75rem' }}>
               <div className="w-12 h-12 rounded-full bg-teal-500/10 border border-teal-200 flex items-center justify-center">
                 <BriefcaseIcon className="w-6 h-6 text-teal-600" />

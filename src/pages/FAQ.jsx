@@ -110,12 +110,14 @@ export default function FAQ() {
                   className="rounded-2xl border transition-all duration-300 overflow-hidden"
                   style={{ 
                     backgroundColor: isOpen ? 'var(--color-section-alt)' : 'var(--color-card-bg)',
-                    borderColor: isOpen ? 'var(--color-accent)' : 'var(--color-border)'
+                    borderColor: isOpen ? 'var(--color-accent)' : 'var(--color-border)',
+                    padding: isOpen ? '15px' : '10px',
                   }}
                 >
                   <button
                     onClick={() => toggleFAQ(index)}
                     className="w-full flex items-center justify-between text-left p-6 hover:bg-slate-100 transition-colors"
+                    style={{ marginBottom: isOpen ? '10px' : '10px' }}
                   >
                     <h3 className="text-lg md:text-xl font-bold text-slate-900 pr-4 leading-snug">{faq.q}</h3>
                     <div 

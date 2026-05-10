@@ -45,7 +45,8 @@ export default function Registration() {
           </p>
 
           {/* Trust Props */}
-          <div className="flex flex-col sm:flex-row justify-center items-center max-w-2xl mx-auto" style={{ gap: '2rem', marginBottom: '2rem' }}>
+          <div className="flex flex-col sm:flex-row justify-center items-center max-w-2xl mx-auto" style={{ gap: '2rem', marginBottom: '2rem' ,margin: '0 auto 3rem auto' }}
+          >
             <div className="flex items-center gap-2">
               <ClockIcon className="w-6 h-6 text-teal-400" />
               <span className="text-white font-bold text-sm uppercase tracking-wider">Quick & Easy</span>

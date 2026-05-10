@@ -37,12 +37,16 @@ export default function Feedback() {
             Share Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-600">Feedback</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto break-words" style={{ marginBottom: '3rem' }}>
+          <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto break-words" 
+            style={{ margin: '0 auto 3rem auto' }}
+          >
             We are constantly striving to improve The Study Zone experience. Whether you're a parent or a student, we would love to hear about your journey with us.
           </p>
 
           {/* Value Props */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto" style={{ marginBottom: '2rem' }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto" 
+            style={{ margin: '0 auto 3rem auto' }}
+          >
             <div className="flex flex-col items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-teal-500/10 border border-teal-200 flex items-center justify-center">
                 <ChatBubbleLeftRightIcon className="w-6 h-6 text-teal-600" />

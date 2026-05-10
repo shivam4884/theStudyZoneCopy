@@ -132,7 +132,7 @@ export default function About() {
               </h2>
               
               <p 
-                className="text-slate-300 text-lg leading-relaxed break-words"
+                className="text-slate-500 text-lg leading-relaxed break-words"
                 style={{ marginBottom: '2.5rem' }}
               >
                 We provide a "field to play" for newly graduated educators to explore their teaching potential. If you have space in your home to tutor students, we will provide the students and handle all the administrative work.

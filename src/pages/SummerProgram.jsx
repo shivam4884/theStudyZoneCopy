@@ -161,13 +161,13 @@ export default function SummerProgram() {
           </div>
 
           {/* Special Callouts */}
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2" style={{ gap: '2rem' }}>
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2" style={{ gap: '2rem', marginTop: '3rem' }}>
              <div className="bg-gradient-to-br from-teal-500/15 to-blue-500/10 border border-teal-200 rounded-3xl p-8 flex items-center justify-center text-center">
                <h3 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">
                  This summer we are offering <br/><span className="text-teal-700">FREE PUNJABI CLASSES!</span>
                </h3>
              </div>
-             <div className="bg-white border border-slate-200 rounded-3xl p-8 flex flex-col justify-center">
+             <div className="bg-white border border-slate-200 rounded-3xl p-8 flex flex-col justify-center" style={{ padding: '10px' }}>
                <h4 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
                  <MapPinIcon className="w-6 h-6 text-teal-500" /> Convenient Locations
                </h4>
@@ -191,7 +191,7 @@ export default function SummerProgram() {
             {/* Features List */}
             <div>
               <h3 className="text-3xl font-extrabold text-slate-900 mb-8" style={{ fontFamily: 'var(--font-heading)' }}>Program Features</h3>
-              <ul className="flex flex-col" style={{ gap: '1.25rem' }}>
+              <ul className="flex flex-col" style={{ gap: '1.25rem', marginTop: '1rem' }}>
                 {programFeatures.map((item, idx) => (
                   <li key={idx} className="flex items-center gap-3 text-lg text-slate-700 font-medium bg-white p-4 rounded-2xl border border-slate-200">
                     <SparklesIcon className="w-6 h-6 text-amber-400 shrink-0" />
@@ -204,7 +204,7 @@ export default function SummerProgram() {
             {/* Subjects List */}
             <div>
               <h3 className="text-3xl font-extrabold text-slate-900 mb-8" style={{ fontFamily: 'var(--font-heading)' }}>Language & Math Focus</h3>
-              <ul className="flex flex-col" style={{ gap: '1rem' }}>
+              <ul className="flex flex-col" style={{ gap: '1rem', marginTop: '1rem' }}>
                 {subjects.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-base text-slate-700">
                     <CheckCircleIcon className="w-6 h-6 text-teal-500 shrink-0 mt-0.5" />

@@ -145,7 +145,7 @@ export default function Services() {
                 eyebrow="Mathematics" 
                 title="Math Tutoring — Grade 1 to University Prep" 
               />
-              <p className="text-lg leading-relaxed text-slate-300 break-words" style={{ marginBottom: '2rem' }}>
+              <p className="text-lg leading-relaxed text-slate-600 break-words" style={{ marginBottom: '2rem' }}>
                 At TSZ, we believe that mastering mathematics should be both enjoyable and rewarding. Our expert math tutors use a friendly, approachable teaching style to demystify complex concepts and build student confidence. By breaking down the Ontario Math Curriculum into simple, manageable steps, we help students build a strong foundation for university and beyond.
               </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: '1.25rem' }}>
@@ -159,7 +159,7 @@ export default function Services() {
                   'Financial Math & Pre-Calculus',
                   'Math Assignment Support'
                 ].map(item => (
-                  <li key={item} className="flex items-start text-base text-slate-300 break-words" style={{ gap: '0.75rem' }}>
+                  <li key={item} className="flex items-start text-base text-slate-600 break-words" style={{ gap: '0.75rem' }}>
                     <CheckCircleIcon className="w-6 h-6 text-teal-400 shrink-0 mt-0.5" />
                     <span style={{ lineHeight: 1.5 }}>{item}</span>
                   </li>
@@ -194,7 +194,7 @@ export default function Services() {
                 eyebrow="Sciences" 
                 title="Elite Science Tutoring — Physics, Chemistry & Biology" 
               />
-              <p className="text-lg leading-relaxed text-slate-300 break-words" style={{ marginBottom: '2rem' }}>
+              <p className="text-lg leading-relaxed text-slate-600 break-words" style={{ marginBottom: '2rem' }}>
                 Experience the wonder of Science with our engaging tutoring sessions. Through interactive lessons, hands-on experiments, and real-world examples, we bring the magic of Science right to you. Our experienced tutors break down complex concepts into simple, understandable terms.
               </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: '1.25rem' }}>
@@ -211,7 +211,7 @@ export default function Services() {
                   'Logical Thinking',
                   'Presentations & Projects'
                 ].map(item => (
-                  <li key={item} className="flex items-start text-base text-slate-300 break-words" style={{ gap: '0.75rem' }}>
+                  <li key={item} className="flex items-start text-base text-slate-600 break-words" style={{ gap: '0.75rem' }}>
                     <CheckCircleIcon className="w-6 h-6 text-indigo-400 shrink-0 mt-0.5" />
                     <span style={{ lineHeight: 1.5 }}>{item}</span>
                   </li>
